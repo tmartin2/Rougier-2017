@@ -135,7 +135,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     filename = args.filename
-    density = scipy.misc.imread(filename, flatten=True, mode='L')
+    
+    # edit TMartin
+    from matplotlib.pyplot import imread
+    density = imread(filename, flatten=True, mode='L')
 
     # We want (approximately) 500 pixels per voronoi region
     zoom = (args.n_point * 500) / (density.shape[0]*density.shape[1])
