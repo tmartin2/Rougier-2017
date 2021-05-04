@@ -159,6 +159,7 @@ if __name__ == '__main__':
     # Initialization
     if not os.path.exists(dat_filename) or args.force:
         points = initialization(args.n_point, density)
+        print(points)
         print("Nb points:", args.n_point)
         print("Nb iterations:", args.n_iter)
     else:
