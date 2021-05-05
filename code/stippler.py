@@ -163,7 +163,8 @@ if __name__ == '__main__':
         print(x[0])
         with open('points.txt', 'w') as p:
             for point in points:
-                p.write(point)
+                x, y = point.tolist()[0], point.tolist()[1]
+                p.write(x,y)
         print("Nb points:", args.n_point)
         print("Nb iterations:", args.n_iter)
     else:
