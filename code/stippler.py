@@ -159,12 +159,12 @@ if __name__ == '__main__':
     # Initialization
     if not os.path.exists(dat_filename) or args.force:
         points = initialization(args.n_point, density)
-        x = [type(point) for point in points]
-        print(x[0])
-        with open('points.txt', 'w') as p:
-            for point in points:
-                x, y = point.tolist()[0], point.tolist()[1]
-                p.write(f'{x},{y}\n')
+#         x = [type(point) for point in points]
+#         print(x[0])
+#         with open('points.txt', 'w') as p:
+#             for point in points:
+#                 x, y = point.tolist()[0], point.tolist()[1]
+#                 p.write(f'{x},{y}\n')
         print("Nb points:", args.n_point)
         print("Nb iterations:", args.n_iter)
     else:
